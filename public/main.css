@@ -1,0 +1,65 @@
+.divider{
+    padding: 5px;
+}
+
+li{
+    color: black;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.undernews{
+    color: black;
+}
+
+.sidebarImg{
+    border-radius: 10px;
+    height: 60px;
+    width: 80px;
+}
+
+.sidebarPara{
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+    font-size: 15px;
+}
+
+.siderowcontainer{
+    cursor: pointer;
+    flex-direction: row;
+    max-width: 560px;
+}
+
+.newsTitle{
+    font-size: 20px;
+}
+
+.search-icon {
+    font-size: 20px; /* Adjust the size as needed */
+    color: #333; /* Adjust the color as needed */
+}
+
+.liCard{
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 720px){
+    .mediumSidebar{
+        display: none;
+    }
+}
+
+.extraCard{
+    display: none;
+}
+
+@media screen and (max-width: 710px) and (min-width: 300px){
+    .largeSidebar{
+        display:none
+    }
+    .extraCard{
+        display: none;
+    }
+}

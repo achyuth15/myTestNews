@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    <form>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Title</label>
+          <input required type="text" class="form-control" id="Title" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">News Title</label>
+          <input required type="text" class="form-control" id="newsTitle" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Script</label>
+          <textarea required class="form-control" id="Script" placeholder="Required example textarea"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="State">State</label>
+          <select required class="form-control" id="State">
+            <option>Telangana</option>
+            <option>AndhraPradesh</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="District">District</label>
+          <select required class="form-control" id="District">
+            <option>Khammam</option>
+            <option>Nalgonda</option>
+          </select>
+        </div>
+        <div class="form-group">
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input required type="file" id="fileInput" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="button" onclick="submitForm()">Submit</button>
+      <!-- </form>
+
+      <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form> -->
+
+      <!-- <form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Example file input</label>
+    <input type="file" id="fileInput" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="submit" onclick="uploadFile()">submite</button>
+</form>
+<div id="response"></div> -->
+
+      <script src="https://apis.google.com/js/api.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+
+function uploadFile() {
+  //event.preventDefault()
+  // Get the file input element
+  const fileInput = document.getElementById('fileInput');
+  
+
+  // Check if a file is selected
+  if (fileInput.files.length > 0) {
+    const file = fileInput.files[0];
+    // Create a FormData object
+    const formData = new FormData();
+
+    // Append the file to the FormData object
+    formData.append('file', file);
+
+    // Perform the file upload using fetch or XMLHttpRequest
+    // Replace 'YOUR_UPLOAD_ENDPOINT' with the actual upload endpoint
+    fetch('/upload', {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle the server response
+      //document.getElementById('response').innerText = `File uploaded successfully. Server response: ${JSON.stringify(data)}`;
+    })
+    .catch(error => {
+      console.error('Error uploading file:', error);
+      //document.getElementById('response').innerText = 'Error uploading file. Please try again.';
+    });
+  } else {
+    alert('Please select a file before uploading.');
+  }
+}
+
+
+
+gapi.load('client', initClient);
+
+function initClient() {
+  gapi.client.init({
+    apiKey: 'AIzaSyCmGL1iQsBqpsOVvTs2LHCaRs5CLHtwbPU',
+    discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+  }).then(() => {
+    console.log('success')
+    // Call functions to interact with the API
+    // e.g., gapi.client.sheets.spreadsheets.values.get(...)
+
+    // Example: Retrieve data from Google Sheet
+              gapi.client.sheets.spreadsheets.values.get({
+                spreadsheetId: '1TM-O9rZ3VUInY0cQgMY7pVnUbPrToZtl0rFmOnp6nEA',
+                range: 'Sheet1', // Specify the sheet name and range
+              }).then(response => {
+const values = response.result.values;
+//console.log('Data from Google Sheet:', values);
+var path = window.location.pathname;
+//console.log(path)
+sessionStorage.setItem('arrayData',JSON.stringify(values.slice(1,values.length)))
+});
+
+  });
+}
+
+function submitForm() {
+    var storedArrayString = sessionStorage.getItem('arrayData');
+    var storedArray = JSON.parse(storedArrayString);
+    console.log(storedArray)
+    const fileInput = document.getElementById('fileInput');
+    console.log(fileInput)
+
+  // Check if a file is selected
+    const file = fileInput.files[0]
+    console.log(file.name)
+      var formData = {
+        ID:storedArray.length+1,
+        Title: document.getElementById('Title').value,
+        NewsTitle: document.getElementById('newsTitle').value,
+        Script:document.getElementById('Script').value,
+        filename:'/img/'+file.name,
+        State:document.getElementById('State').value,
+        District:document.getElementById('District').value
+      };
+
+      // Send form data to Google Apps Script
+      fetch('https://script.google.com/macros/s/AKfycbxMu9AYonR_QmPISp4wSlcaQwdJXae1Mcjw3gITTQyuextxfrgwRMtm0wrJN_TgKg-Deg/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+      .then(response => response.text())
+      .then(message => {
+        console.log(message);
+        alert('Form data submitted successfully!');
+        uploadFile()
+      })
+      .catch(error => {
+        console.error('Error submitting form data:', error);
+        alert('Error submitting form data. Please try again.');
+      });
+    }
+
+
+//     // Replace with your API key or OAuth client ID
+// const API_KEY = 'YOUR_API_KEY_OR_CLIENT_ID';
+
+// // The ID of your Google Sheet (extract from the sheet URL)
+// const SPREADSHEET_ID = 'YOUR_SPREADSHEET_ID';
+
+// function submitForm() {
+//   const formData = {
+//     name: document.getElementById('name').value,
+//     email: document.getElementById('email').value,
+//   };
+
+//   appendDataToSheet(formData);
+// }
+
+// function appendDataToSheet(formData) {
+//   gapi.client.sheets.spreadsheets.values.append({
+//     spreadsheetId: '1TM-O9rZ3VUInY0cQgMY7pVnUbPrToZtl0rFmOnp6nEA',
+//     range: 'Sheet1', // Update with your sheet name
+//     valueInputOption: 'USER_ENTERED',
+//     resource: {
+//       values: [[formData.name, formData.email]],
+//     },
+//   }).then(response => {
+//     console.log('Data appended:', response);
+//     alert('Data submitted successfully!');
+//   }).catch(error => {
+//     console.error('Error appending data:', error);
+//     alert('Error submitting data. Please try again.');
+//   });
+// }
+
+// function initClient() {
+//   gapi.client.init({
+//     apiKey: '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',
+//     discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+//   }).then(() => {
+//     console.log('Google Sheets API client initialized');
+//   }).catch(error => {
+//     console.error('Error initializing Google Sheets API client:', error);
+//   });
+// }
+
+// gapi.load('client', initClient);
+
+  </script>
+  </body>
+</html>

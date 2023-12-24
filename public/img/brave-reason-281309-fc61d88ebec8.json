@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "brave-reason-281309",
+  "private_key_id": "fc61d88ebec863c26edfa78f645f90e4e35678fa",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDVfbzWWOZ/8jHX\nftfBb8Ab5YitrAIUl8C1cSQ4xyt2QlV7TuJqN47iJe7TfMwq+ONMFzyCZxcb+95s\n+cCLSh/wGtnPKlG4GgmHOjn1W07byepAgwHS01vojASKmLvQGyUuvFO+kkKyehC8\npLSgnS9IOyu6iE1UHY9gKn9RJ0CGecX2Vjg5vKyxLq9lhYM9Q1figzSlda++UCK2\nhpsNdlbjzaug7t1Iqh/XNYRSjREPL5l3YeCznkLYe5OgESYdX7BZl5s7Ro6zLoiV\nQuZ114TRY85/gM1yxHMzWeGCJrgMALq1qCStjGhbaz80F2f6Yvi831pE7W1BTp5w\nBn8wwktTAgMBAAECggEACVUXRE7GOLFCJizodToTgu9W47H2tKa+PlA6qJ666CRV\n2e+PVzGkNdTkVUC0fhZmJ+UwzcnViUbKfidcGC/+fb+hZicamQ/OUH0mRnLzhgkU\nC+DjhgSblRVLJ4cuApav2pSnRoKHQYezeUOWlRoklHroWkhAtRzGWopRCXT2ovTV\nl6G7DjrIkICIhxbjRKfL3uf1vJZRm0IVva931GYBJnwGnm9XnXPtjc2gAxwuF66I\nuXB8fVf0fH50LTnxbG5FQuIxWnZ58qb/pLSxrUTcXHILDBsbVJZZVm5/5a3bZZVr\nR6KUm/X7/Uis5PIlc3CMInEFCuVU6WVBWbLvJ1+TAQKBgQD/gPs7DBATEY0rrDUs\nY/Bprn6ELo1CbVpBzI/1HLzz8TIkOaPfOFsneQYUy0FxNV5JxMiWORmhHVLK8H1D\n5N5WjXmxuP/2GWzFsZZI6lmaO+8IJDKimM3IxqoGS8IvsRzVenz4LD8Fs2NJgXkL\nBgdhoZHaSYZOw8C6WcwApBx9AQKBgQDV597aF+34VX+dZ10lMOP1ZLgvUilMsXOb\ngIuYHc5ScmunHV3IgtGc9lk2ezMmz5bsXLDMfzbjqwU37+uyHKcHRmT9x5MJRXsU\n0FAMqqzJ5UNBZC7O0tfq+gIzkrF24Cvi/geK0gAb2EU+kw5iaaRpXtg/MGd6lbnZ\nR0a8HtHEUwKBgQC/x+jLoXpPVdVI+rHO6BUEvl1oiiitu7cLvKgxq6iI0np4hmti\nmcKSFl1iLk6o0w47AOIvIB0EuiXy/iCIXbol7Xty0xINf3gNzAaqJH2tL190FPeM\n5HVSRwxIPYU8lwy1kINNJKkJdmUIP47Dn3ra5ZO87YNKi9SWC+D8ejKIAQKBgQDS\nfQr0fdu0JR4g3Bfygvuu/F+qYSU2zN/AQ2waUio3Q1Tf66vfpaty04/SZsVdCaWw\nDT4E3aI7woyuEK9UY5GRPRogCIWN+As33g0HiePiAHKAJH9TEnNaTI5iBZYQLmPB\nSMxPNHra66SoALmE6gPZlHUjKRSKsk9hmhvm/kTY9QKBgE2SFkN+qddE59ykCLAc\nOEMRPa7JUBH4hHsQsHdmxdfRLD8wcRCnSJcCzn7+LdEOX5hoppHuijDMjb+8QSt6\nvsLHWJyIYOV06g23Rv8RIY5FjKh5GmRqEqkBSGaC2kMQpeGcKvPdtfufWS77KiIJ\nUmQo4lJnowHvIe0g/10VkxKc\n-----END PRIVATE KEY-----\n",
+  "client_email": "brave-reason-281309@appspot.gserviceaccount.com",
+  "client_id": "113076742581826516689",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/brave-reason-281309%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <link rel="icon" href="homeo.jpeg" type="image/x-icon">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-jHNBZhDDttnXqr5INajQ6wEx5M8fDHNt/qKZcpPxip0HAP9Rhdog+p6LmiW2vQ2OGJ4n7HjWjM2hujepjDV+3w==" crossorigin="anonymous" /> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>హోమియో మందుల పంపిణీ</title>
+        <style>
+     
+     
+        </style>
+        <script src="./script.js"></script>
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="https://kit.fontawesome.com/c4ca0fdf1c.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="width: 100%;" >
+      
+    <a href="" id="blank" rel="noopener noreferrer"></a>
+        
+        <div  style="width: 100%;">
+            <header style="background-color: rgb(79, 184, 245);
+            position: fixed; top: 0px; width: 100%; height: 60px; z-index: 12;
+             display: flex; align-items: center; 
+             padding: 15px 10px; background: rgba(255, 255, 255, 0.8);
+             box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 8px;" >
+                
+                    <img src=../ICON.jpeg width=50px height=50px style="border-radius: 40%;">
+                    <strong style="text-align:center;font-size: 150%;;">MBM NEWS</strong>
+                   
+            </header>
+        </div>
+     <br>
+        
+<hr>
+
+
+
+<!--navbar-->
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">YDR-BCM</a>
+  <div>
+    <i class="fas fa-search fa-lg d-lg-none"></i>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  </div>
+  
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="../about.html">About</a>
+        
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" onclick="search()"><p onclick="search()">search</p></a>
+        
+      </li>
+     
+    </ul>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../contact.html">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="../about.html">About</a>
+        
+      </li>     
+    </ul>
+    <form class="form-inline my-2 my-lg-0" id="searchForm" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchInput" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchInput" aria-label="Search"> -->
+  </div>
+</nav>
+<div id="searchCon" style="padding: 10px;display: none;">
+  <input type="text" style="width: 100%;" name="" id="">
+</div>
+<!--navbar-->
+
+<!--HOME-->
+<!-- SearchResults -->
+<div class="row searchResults" id="searchResults" style="padding: 20px;">
+  <!-- <div class="col-12 col-md-6 col-lg-4">
+    <div class="row liCard" style="padding: 5px;" onclick="miniCardClick(this)" id="12">
+      <div class="col-3"><img src="img5.jpg" style="width:80px" class="sidebarImg" id="sidebarImgId1"></div>
+      
+        <div class="col-9 sidebarPara" id="sidebarParaId1" style="display: flex;align-items: center;">
+          <p class="card-text">కరోనా దెబ్బకు చిద్రమైన కలం కార్మికుల బతుకులు</p>
+        </div>
+      
+      
+    </div>
+  </div> -->
+  
+  
+</div>
+<!-- SearchResultsEnd -->
+<div class="divider" id="divider">
+<div class="row">
+    <div class="col-md-8 col-12 " id="MainScriptCon" style="text-align: center;">
+      <!-- <b>హోమియో మందుల పంపిణీ</b>
+      <br>      -->
+        <img src="" class="img-responsive img-fluid" style="height: 450px;" id="mainImg" alt="">
+<br>
+<p style="text-align: justify;">
+  <b id="Main-Title">
+    <!-- హోమియో మందుల పంపిణీ -->
+  </b></p>
+  <p style="text-align: justify;padding: 10px;" id="Main-Script">
+    <!-- రోగ నిరోధక శక్తి పెంపొందించుకుని కరోనా మహమ్మారిని జయించడానికి నల్గొండ జిల్లా  వికాస తరంగిణి వారు  ఉచిత హోమియో మందుల పంపిణీ చేయడం జరిగింది.  తెలంగాణ రాష్ట్ర విద్యుత్ శాఖామాత్యులు శ్రీ గుంతకండ్ల జగదీశ్వర్ రెడ్డి  కార్యక్రమాన్ని ప్రారంభించారు.  పోలీస్ సిబ్బందికి, ప్రజలకు ఈ మందులు అందజేశారు..ఈ పంపిణీ కార్యక్రమంలో  నల్గొండ శాసన సభ్యులు శ్రీ కంచర్ల భూపాల్ రెడ్డి , నల్గొండ మున్సిపల్ చైర్మన్ శ్రీ మందడి సైది రెడ్డి  ,వికాస తరంగిణి జిల్లా అధ్యక్షులు చకిలం వేణు గోపాల్ రావు ,కార్యదర్శి శ్రీమతి ఎర్రమాధ సుజాత ,జిల్లా మహిళా ఆరోగ్య వికాస్ బాధ్యులు శ్రీమతి భువనగిరి భారతమ్మ ,సభ్యులు శ్రీ కార్తీక్  పాల్గొన్నారు.... -->
+</p>
+</div>
+
+<!-- sidebar -->
+<div class="col-md-4 largeSidebar" id="largeSidebarID">
+
+</div>
+</div>
+
+<!-- Card Elements -->
+
+<div class="row" id="test" style="padding: 30px;">
+    
+
+<!-- <div class="card-group classcard"> -->
+    <div class="card col-md-3 col-sm-4 col-12 card1" onclick="miniCardClick()" style="cursor:pointer;">
+      <br>
+      <img src="" class="card-img-top" id="newsCardImg1" alt="..." style="cursor:pointer;height: 150px;">
+      <div >
+        <br>
+        <h3 class="card-title newsTitle" id="newsCardTitle1" style="font-size: 18px;" ></h3>
+        <p></p>
+      </div>
+    </div>
+    <p></p>
+    <div class="card col-md-3 col-sm-4 col-12 card2" style="cursor:pointer">
+      <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg2" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle2"></h3>
+          
+          
+        </div>
+      </div>
+      <p></p><div class="card col-md-3 col-sm-4 col-12 card3" style="cursor:pointer">
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg3" alt="..." style="cursor:pointer">
+        <div > 
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle3"></h3>
+          
+          
+        </div>
+      </div>
+      <p></p><div class="card col-md-3 col-sm-4 col-12 card4" style="cursor:pointer">
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg4" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle4"></h3>
+         
+          
+        </div>
+      </div>
+      <p></p><div class="card col-md-3 col-sm-4 col-12 card5" style="cursor:pointer">
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg5" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle5"></h3>
+          
+          
+        </div>
+      </div>
+      <p></p><div class="card col-md-3 col-sm-4 col-12 card6" style="cursor:pointer">
+        <br>
+        
+        <img src="" class="card-img-top img-fluid" id="newsCardImg6" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle6"></h3>
+           
+          
+        </div>
+      </div>
+      <p></p>
+      <div class="card col-md-3 col-sm-4 col-12 card7 extraCard" style="cursor:pointer">
+        
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg7" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle7"></h3>
+          
+          
+        </div>
+      </div>
+      <p></p><div class="card col-md-3 col-sm-4 col-12 card8 extraCard" style="cursor:pointer">
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg8" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle8"></h3>
+           
+          
+        </div>
+      </div>
+      <p></p>
+      <div class="card col-md-3 col-sm-4 col-12 card9 extraCard" style="cursor:pointer;">
+        <br>
+        <img src="" class="card-img-top img-fluid" id="newsCardImg9" alt="..." style="cursor:pointer">
+        <div >
+          <br>
+          <h3 class="card-title newsTitle" id="newsCardTitle9"></h3>
+           
+          
+        </div>
+      </div>
+      <p></p>
+    <!-- class card end
+</div> -->
+
+  
+
+
+</div>
+<div class="col-12 mediumSidebar" id="mediumSidebarID">
+
+</div>
+</div>
+<!-- notifytest -->
+<button onclick="showNotification()">Show Notification</button>
+
+<script>
+  function showNotification() {
+    // Check if the browser supports notifications
+    if (!('Notification' in window)) {
+      alert('This browser does not support desktop notifications.');
+    } else {
+      
+      // Request permission to show notifications
+      Notification.requestPermission().then(function (permission) {
+        if (permission === 'granted') {
+          
+          // Create and show the notification
+          var notification = new Notification('My Website', {
+            body: 'This is a notification from my website!',
+            icon: '' // Provide the path to your notification icon
+          });
+          console.log('test')
+          // Optional: Handle click events on the notification
+          notification.onclick = function () {
+            alert('Notification clicked!');
+            console.log('notify')
+          };
+        } else {
+          console.log('denied')
+          alert('Permission to show notifications denied.');
+        }
+      });
+    }
+  }
+</script>
+
+
+<footer style="text-align: center;widows: 100%;margin-top: 3px;">
+  <p class="a">copyright &copy; myblog 2020.Allrights reserved.</p>
+    <p class="a">made with &hearts; in india</p>
+
+</footer>
+<script>
+  
+gapi.load('client', initClient);
+
+  function initClient() {
+    gapi.client.init({
+      apiKey: 'AIzaSyCmGL1iQsBqpsOVvTs2LHCaRs5CLHtwbPU',
+      discoveryDocs: ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+    }).then(() => {
+      console.log('success')
+      // Call functions to interact with the API
+      // e.g., gapi.client.sheets.spreadsheets.values.get(...)
+
+      // Example: Retrieve data from Google Sheet
+                gapi.client.sheets.spreadsheets.values.get({
+                  spreadsheetId: '1TM-O9rZ3VUInY0cQgMY7pVnUbPrToZtl0rFmOnp6nEA',
+                  range: 'Sheet1', // Specify the sheet name and range
+                }).then(response => {
+  const values = response.result.values;
+  //console.log('Data from Google Sheet:', values);
+    var path = window.location.pathname;
+    //param
+    var currentURL = window.location.href;
+    // Create a URLSearchParams object
+    var urlParams = new URLSearchParams(window.location.search);
+    // Get individual parameters
+    var search = urlParams.get('search');
+
+    // Display the parameters (you can do whatever you need with them)
+    console.log('param1:', search);
+    
+    //param
+  //console.log(path)
+  sessionStorage.setItem('arrayData',JSON.stringify(values.slice(1,values.length)))
+  //performSearch(search)
+  //console.log(search.length)
+  if (search==null){
+    getinitialdata(values,path)
+  }
+  else{
+    performSearch(search)
+  }
+  
+});
+
+    });
+  }
+  //search
+
+  const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+    console.log(searchInput)
+    //const searchResultsContainer = document.getElementById('searchResults');
+
+    // Add an event listener to the form for submission
+    searchForm.addEventListener('submit', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Get the search query from the input
+        const query = searchInput.value;
+
+        // Perform a search (this is a placeholder function, replace it with your actual search logic)
+        performSearch(query);
+    });
+
+    // Function to perform the search (replace this with your actual search logic)
+    
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ 
+
+
+
+    </body>
+</html>
